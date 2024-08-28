@@ -1,0 +1,88 @@
+body {
+    height: 100vh;
+    width:100vw;
+    overflow: hidden;
+    display:block;
+    z-index: -1;
+}
+#banner {
+    display: flex;
+    height: 60px;
+    position:absolute;
+    left:0;
+    top:0;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+    background-color: grey;
+}
+#icon {
+    display: grid;
+    padding-left: 20px;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+    grid:
+        'a b';
+    
+    width:fit-content;
+}
+#icon img{
+    width:40px;
+    grid-area: a;
+}
+#icon h1 {
+    font-size: x-large;
+    width: fit-content;
+    grid-area: b;
+}
+#icon:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#links {
+    display: grid;
+    width: 400px;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    grid-template-columns: auto auto auto auto auto;
+    grid:
+        'lb lc ld le'
+}
+#links li a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+#links li a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.b {
+    grid-area: lb;
+}
+.c {
+    grid-area: lc;
+}
+.d {
+    grid-area: ld;
+}
+.e {
+    grid-area: le;
+}
+
+.scrollBody {
+    width:100vw;
+    background-color: blue;
+    position: absolute;
+    height: calc(100vh - 60px);
+    top: 60px;
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
